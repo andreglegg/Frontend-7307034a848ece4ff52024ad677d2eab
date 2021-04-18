@@ -15,6 +15,11 @@ const Paginate = (props) => {
 											Previous
 										</PaginationLink>
 								</PaginationItem>
+								<PaginationItem disabled>
+										<PaginationLink>
+												{page}
+										</PaginationLink>
+								</PaginationItem>
 								<PaginationItem disabled={page >= (totalProducts/limit)}>
 										<PaginationLink next href={`/?page=${nextPage}&limit=${limit}`}>
 											Next

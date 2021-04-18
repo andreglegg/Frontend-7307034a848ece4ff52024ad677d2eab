@@ -1,6 +1,6 @@
 import React from "react";
 import PageTemplate from '../features/pageTemplate/PageTemplate';
-import SearchPage from '../features/Products/SearchPage';
+import SearchPage from '../features/products/SearchPage';
 
 const HomePage = (props) => {
 
