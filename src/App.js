@@ -7,7 +7,7 @@ import './App.scss';
 
 const App = () => {
 		return(
-						<Router>
+						<Router forceRefresh={true}>
 										<Switch>
 												<Route exact path={["/", "/product/"]} component={HomePage} />
 												<Route path="/product/:id" component={ProductPage} />

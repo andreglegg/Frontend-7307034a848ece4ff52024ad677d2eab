@@ -26,9 +26,11 @@ const getProductsFailure = (error) => {
 }
 
 const getProducts = (query) => {
+		const { s, page, limit } = query;
+		const newQuery = {s: s || '', page: page || 1, limit: limit || 12}
 		return dispatch => {
-				dispatch(getProductsBegin(query));
-				return ShopService.getPaginatedProducts(query)
+				dispatch(getProductsBegin(newQuery));
+				return ShopService.searchProducts(newQuery)
 								.then(res => {
 										dispatch(getProductsSuccess(res));
 										return res

@@ -15,27 +15,30 @@ import styles from './ProductCard.module.scss'
 const ProductCard = (product) => {
 		const {id, name, description, defaultImage, images, price, discount} = product;
 		return (
-						<Col xs={12} md={4} className={combineClasses(styles.ProductCard, "mb-5")} key={id}>
+						<Col xs={12} md={4} className={combineClasses(styles.ProductCard, 'mb-5')} key={id}>
 								<Card>
 										<Link to={`/product/${id}`}>
 												<CardImg top width="100%" src={defaultImage} alt={name}/>
 										</Link>
 										<CardBody>
 												<div className={styles.Title}>
-												<Link to={`/product/${id}`}>
-														<CardTitle tag="h5">{name}</CardTitle>
-												</Link>
+														<Link to={`/product/${id}`}>
+																<CardTitle tag="h5">{name}</CardTitle>
+														</Link>
 												</div>
-												<CardText>
-														<Row>
-																<Col xs={12}>
-																		<p className={styles.Price}>{price} kr</p>
-																</Col>
-																<Col xs={12}>
-																	<Button block color="success">Add to cart</Button>
-																</Col>
-														</Row>
-												</CardText>
+												<Row>
+														<Col xs={12}>
+																<p className={styles.Price}>
+																		{price} kr
+																</p>
+														</Col>
+														<Col xs={12}>
+																<CardText>
+																		<Button block color="success">Add to cart</Button>
+																</CardText>
+														</Col>
+												</Row>
+
 										</CardBody>
 								</Card>
 						</Col>

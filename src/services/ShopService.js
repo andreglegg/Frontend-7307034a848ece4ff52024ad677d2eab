@@ -22,9 +22,9 @@ const getAllProducts = () => {
 		return http.get('/products');
 };
 
-const getPaginatedProducts = (query) => {
-		const { page, limit } = query;
-		return http.get(`/products?_page=${page}&_limit=${limit}`);
+const searchProducts = (query) => {
+		const { s, page, limit } = query;
+		return http.get(`/products?q=${s}&_page=${page}&_limit=${limit}`);
 };
 
 const getProduct = (id) => {
@@ -35,7 +35,7 @@ const ShopService = {
 		getAllUsers,
 		getUser,
 		getAllProducts,
-		getPaginatedProducts,
+		searchProducts,
 		getProduct,
 };
 
