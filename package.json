@@ -1,12 +1,34 @@
 {
-  "name": "frontend-json-server-starter",
+  "name": "smart-hardware-shop",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "json-server ./generator.js --port 8080 --delay 500"
+    "start": "json-server ./generator.js --port 8080 --delay 500",
+    "start-react": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "faker": "^5.4.0",
-    "json-server": "^0.16.3"
+    "json-server": "^0.16.3",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
