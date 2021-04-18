@@ -1,12 +1,18 @@
 import React, {useEffect} from "react";
-import {useSelector, useDispatch} from 'react-redux'
-
-import actions from './actions';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PageTemplate from './features/pageTemplate/PageTemplate';
-import styles from './App.module.scss';
+import HomePage from './pages/HomePage';
+import ProductPage from './pages/ProductPage';
 
 const App = () => {
-		return(<PageTemplate>Smart hardware shop</PageTemplate>)
+		return(
+						<Router>
+										<Switch>
+												<Route exact path={["/", "/product/"]} component={HomePage} />
+												<Route path="/product/:id" component={ProductPage} />
+										</Switch>
+						</Router>
+		)
 }
 
 export default App;

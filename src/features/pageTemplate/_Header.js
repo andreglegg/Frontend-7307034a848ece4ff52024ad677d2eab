@@ -7,7 +7,7 @@ import styles from './_Header.module.scss';
 
 const Header = () => {
 		return(
-						<Row className={combineClasses(styles.Header,"py-5")}>
+						<Row className={combineClasses(styles.Header,"p-4")}>
 								<Col xs={12}>
 										<h1 className="text-primary">Smart hardware shop</h1>
 								</Col>

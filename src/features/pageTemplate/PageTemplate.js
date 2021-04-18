@@ -12,10 +12,10 @@ const PageTemplate = (props) => {
 						<Container>
 								<Header />
 								<Row>
-										<Col xs={12} md={8}>
+										<Col xs={12} md={8} className="p-4">
 												{children}
 										</Col>
-										<Col xs={12} md={4}>
+										<Col xs={12} md={4} className="p-4">
 												<Sidebar/>
 										</Col>
 								</Row>
