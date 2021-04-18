@@ -45,7 +45,7 @@ const Login = (props) => {
 																</Alert>
 														</Col>) : ''}
 										<Col xs={12}>
-												<Button block disabled={loading} color="success">{loading ? (
+												<Button block disabled={loading} color="primary">{loading ? (
 																<Spinner size="sm" color="secondary"/>) : 'Login'}</Button>
 										</Col>
 								</FormGroup>

@@ -2,10 +2,11 @@ import React from "react";
 import PageTemplate from '../features/pageTemplate/PageTemplate';
 import SearchPage from '../features/Products/SearchPage';
 
-const HomePage = () => {
+const HomePage = (props) => {
+
 		return(
 						<PageTemplate>
-								<SearchPage/>
+								<SearchPage {...props}/>
 						</PageTemplate>
 		)
 }

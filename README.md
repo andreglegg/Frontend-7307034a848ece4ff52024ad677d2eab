@@ -82,7 +82,7 @@ Endpoints:
 Expect objects to look something like this:
 
 ```typescript
-type Product = {
+type ProductCard = {
     id: number,
     name: string,
     description: string,

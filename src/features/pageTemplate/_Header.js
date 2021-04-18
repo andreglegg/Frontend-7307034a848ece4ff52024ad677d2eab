@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Row from 'reactstrap/lib/Row';
 import Col from 'reactstrap/lib/Col';
 
@@ -9,7 +10,9 @@ const Header = () => {
 		return(
 						<Row className={combineClasses(styles.Header,"p-4")}>
 								<Col xs={12}>
-										<h1 className="text-primary">Smart hardware shop</h1>
+										<Link to="/">
+											<h1 className="text-primary">Smart hardware shop</h1>
+										</Link>
 								</Col>
 						</Row>
 		)
