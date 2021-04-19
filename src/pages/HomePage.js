@@ -1,12 +1,12 @@
 import React from "react";
 import PageTemplate from '../features/pageTemplate/PageTemplate';
-import SearchPage from '../features/products/SearchPage';
+import Search from '../features/products/Search';
 
 const HomePage = (props) => {
 
 		return(
 						<PageTemplate>
-								<SearchPage {...props}/>
+								<Search {...props}/>
 						</PageTemplate>
 		)
 }

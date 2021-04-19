@@ -10,7 +10,7 @@ const App = () => {
 						<Router forceRefresh={true}>
 										<Switch>
 												<Route exact path={["/", "/product/"]} component={HomePage} />
-												<Route path="/product/:id" component={ProductPage} />
+												<Route path="/product/:pID" component={ProductPage} />
 										</Switch>
 						</Router>
 		)

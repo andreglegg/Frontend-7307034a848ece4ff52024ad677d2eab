@@ -11,6 +11,7 @@ import Row from 'reactstrap/lib/Row';
 
 import combineClasses from '../../../../utils/combineClasses';
 import styles from './ProductCard.module.scss'
+import formatPrice from '../../../../utils/formatPrice';
 
 const ProductCard = (product) => {
 		const {id, name, description, defaultImage, images, price, discount} = product;
@@ -29,7 +30,7 @@ const ProductCard = (product) => {
 												<Row>
 														<Col xs={12}>
 																<p className={styles.Price}>
-																		{price} kr
+																		{formatPrice(price)} kr
 																</p>
 														</Col>
 														<Col xs={12}>

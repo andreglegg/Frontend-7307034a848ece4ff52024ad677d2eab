@@ -5,8 +5,8 @@ import InputGroup from 'reactstrap/lib/InputGroup';
 import Input from 'reactstrap/lib/Input';
 
 const SearchInput = (props) => {
-		const { history, limit } = props;
-		const [searchString, setSearchString] = useState('');
+		const { history, limit, qSearchString } = props;
+		const [searchString, setSearchString] = useState(qSearchString);
 
 		const handleInputChange = (event) => {
 				event.preventDefault();

@@ -1,49 +1,47 @@
 import ShopService from '../services/ShopService';
 
-export const GET_PRODUCTS_BEGIN = "GET_PRODUCTS_BEGIN";
-export const GET_PRODUCTS_FAILURE = "GET_PRODUCTS_FAILURE";
-export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
+export const GET_PRODUCT_DETAIL_BEGIN = "GET_PRODUCT_DETAIL_BEGIN";
+export const GET_PRODUCT_DETAIL_FAILURE = "GET_PRODUCT_DETAIL_FAILURE";
+export const GET_PRODUCT_DETAIL_SUCCESS = "GET_PRODUCT_DETAIL_SUCCESS";
 
-const getProductsBegin = (query) => {
+const getProductDetailBegin = (id) => {
 		return {
-				type: GET_PRODUCTS_BEGIN,
-				payload: query
+				type: GET_PRODUCT_DETAIL_BEGIN,
+				payload: id
 		}
 }
 
-const getProductsSuccess = (products) => {
+const getProductDetailSuccess = (product) => {
 		return {
-				type: GET_PRODUCTS_SUCCESS,
-				payload: products
+				type: GET_PRODUCT_DETAIL_SUCCESS,
+				payload: product
 		}
 }
 
-const getProductsFailure = (error) => {
+const getProductDetailFailure = (error) => {
 		return {
-				type: GET_PRODUCTS_FAILURE,
+				type: GET_PRODUCT_DETAIL_FAILURE,
 				payload: error
 		}
 }
 
-const getProducts = (query) => {
-		const { s, page, limit } = query;
-		const newQuery = {s: s || '', page: page || 1, limit: limit || 12}
+const getProduct = (id) => {
 		return dispatch => {
-				dispatch(getProductsBegin(newQuery));
-				return ShopService.searchProducts(newQuery)
+				dispatch(getProductDetailBegin(id));
+				return ShopService.getProduct(id)
 								.then(res => {
-										dispatch(getProductsSuccess(res));
+										dispatch(getProductDetailSuccess(res));
 										return res
 								})
 								.catch(error =>
-										dispatch(getProductsFailure(error))
+										dispatch(getProductDetailFailure(error))
 								);
 		}
 }
 
 export default {
-		getProducts,
-		getProductsBegin,
-		getProductsSuccess,
-		getProductsFailure
+		getProduct,
+		getProductDetailBegin,
+		getProductDetailSuccess,
+		getProductDetailFailure
 }
