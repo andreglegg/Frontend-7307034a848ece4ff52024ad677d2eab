@@ -49,11 +49,13 @@ npm install
 
 Run the API server using
 ``` sh
-yarn start
+yarn start 
+yarn start-react
 ``` 
 or 
 ``` sh
 npm run start
+npm run start-react
 ```
 The default location for the json-server is [`localhost:8080`](http://localhost:8080)
 
